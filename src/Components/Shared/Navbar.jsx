@@ -13,7 +13,8 @@ import {
     ListItemIcon,
     ListItemText, 
     Divider,
-    Drawer
+    Drawer,
+    useMediaQuery
 } from '@mui/material'
 
 import {NavLink} from "react-router-dom"
@@ -51,6 +52,8 @@ import {
     ThumbUpOutlined,
     ThumbUp
 } from "@mui/icons-material"
+
+
 
 const drawerWidth = 250
 
@@ -118,6 +121,8 @@ const Navbar = (props) => {
         },
     ]
 
+    const fullSearchBar = useMediaQuery('(max-width:1000px)')
+
     const [selectedIndex, setSelectedIndex] = useState(0)
 
     const handleListItemClick = (event, index) => {
@@ -146,12 +151,19 @@ const Navbar = (props) => {
                         </Grid>
                         
                         <Grid item>
-                            <Grid container spacing={2} alignItems="center">
+                            <Grid container spacing={1} alignItems="center">
                                 <Grid item>
-                                    <InputBase 
-                                        style={{width: "500px", background: "rgba(0, 0, 0, 0.1)", padding: '5px 10px'}} 
-                                        endAdornment={<IconButton><SearchIcon /></IconButton>} placeholder="Search" 
-                                    />
+                                    {fullSearchBar ?
+                                        <IconButton>
+                                            <SearchIcon />
+                                        </IconButton>
+                                        :
+                                        <InputBase 
+                                            style={{width: "500px", background: "rgba(0, 0, 0, 0.1)", padding: '5px 10px'}} 
+                                            endAdornment={<IconButton><SearchIcon /></IconButton>} placeholder="Search" 
+                                        />
+                                    }
+                                    
                                 </Grid>
                                 <Grid item>
                                     <IconButton>

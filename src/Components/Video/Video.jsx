@@ -11,12 +11,32 @@ const Video = ({Data}) => {
         return `${mins}:${remaining}`
     }
 
+    const formatTitle = (title) => {
+        var newString = title
+        const len = newString.length
+        if(len >= 100) {
+            newString = `${newString.slice(0, 50)}"..."`
+        }
+        console.log(len)
+        return newString
+    }
     return (
-        <div style={{maxWidth: "350px", margin: "10px"}}>
+        <div style={{maxWidth: "380px", margin: "10px"}}>
             <Link underline="none" to={Data.Link} style={{color: "inherit"}} component={NavLink}>
-                <div style={{marginBottom: "10px", height: "160px"}}>
+                <div style={{marginBottom: "10px", height: "180px"}}>
                     <img src={Data.Thumbnail} style={{width: "100%", height: "100%"}}/>
-                    <p style={{background: "rgba(0, 0, 0, 0.8)", color: "white", marginTop: "-28px", width: "40px", marginLeft: "auto", fontSize: "14px"}}>{formatTime(Data.Duration)}</p>
+                    <p 
+                        style={{
+                            background: "rgba(0, 0, 0, 0.8)", 
+                            color: "white", 
+                            marginTop: "-28px", 
+                            width: "40px", 
+                            marginLeft: "auto", 
+                            fontSize: "14px"
+                        }}
+                    >
+                        {formatTime(Data.Duration)}
+                    </p>
                 </div>
             </Link>
             <div>
@@ -31,7 +51,7 @@ const Video = ({Data}) => {
                     <Grid item style={{width: "210px"}}>
                         <Link underline="none" to={Data.Link} component={NavLink} style={{color: "inherit"}}>
                             <Typography variant="body1" style={{fontWeight: "bold", opacity: "0.85", fontSize: "14px"}}>
-                                {Data.Title}
+                                {formatTitle(Data.Title)}
                             </Typography>
                         </Link>
                     </Grid>
