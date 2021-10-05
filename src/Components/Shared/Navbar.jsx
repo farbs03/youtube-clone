@@ -244,7 +244,7 @@ const Navbar = (props) => {
                     <Divider />
                 </Box>
             </Drawer>
-            <Box component="main" sx={{ flexGrow: 1, p: 3, background: "#f000" }}>
+            <Box component="main" sx={{ flexGrow: 1, p: 3, background: "rgba(0, 0, 0, 0.02)" }}>
                 <Toolbar />
                 {props.children}
             </Box>
