@@ -41,7 +41,7 @@ const DannyGonzalez = {
 
 const DannyGonzalezVideo = {
     Thumbnail: DannyGonzalezThumbnail,
-    Title: "Alpha And Sigma Males Are At War And They're Both Losing",
+    Title: "Alpha And Sigma Males Are At War And ...",
     Creator: DannyGonzalez,
     Views: "2.1M",
     TimeElapsed: "4 days ago",
