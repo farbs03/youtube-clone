@@ -25,18 +25,19 @@ const Video = ({Data}) => {
             <Link underline="none" to={Data.Link} style={{color: "inherit"}} component={NavLink}>
                 <div style={{marginBottom: "10px", height: "180px"}}>
                     <img src={Data.Thumbnail} style={{width: "100%", height: "100%"}}/>
-                    <p 
+                    <div 
                         style={{
-                            background: "rgba(0, 0, 0, 0.8)", 
+                            backgroundColor: "rgba(0, 0, 0, 0.8)", 
                             color: "white", 
                             marginTop: "-28px", 
                             width: "40px", 
-                            marginLeft: "auto", 
-                            fontSize: "14px"
+                            marginLeft: "auto",
+                            fontSize: "14px",
+                            zIndex: "1"
                         }}
                     >
                         {formatTime(Data.Duration)}
-                    </p>
+                    </div>
                 </div>
             </Link>
             <div>
@@ -50,7 +51,7 @@ const Video = ({Data}) => {
                     </Grid>
                     <Grid item style={{width: "210px"}}>
                         <Link underline="none" to={Data.Link} component={NavLink} style={{color: "inherit"}}>
-                            <Typography variant="body1" style={{fontWeight: "bold", opacity: "0.85", fontSize: "14px"}}>
+                            <Typography variant="body1" style={{fontWeight: "bold", opacity: "0.95", fontSize: "14px"}}>
                                 {formatTitle(Data.Title)}
                             </Typography>
                         </Link>
