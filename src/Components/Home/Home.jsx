@@ -68,7 +68,7 @@ const SecondThoughtVideo = {
 
 const HasanAbi = {
     Profile: HasanAbiProfile,
-    Name: "Second Thought",
+    Name: "Hasanabi",
     Link: "#",
     Verified: true
 }
