@@ -41,7 +41,7 @@ const DannyGonzalez = {
 
 const DannyGonzalezVideo = {
     Thumbnail: DannyGonzalezThumbnail,
-    Title: "Alpha And Sigma Males Are At War And ...",
+    Title: "Alpha And Sigma Males Are At War And They're Both ...",
     Creator: DannyGonzalez,
     Views: "2.1M",
     TimeElapsed: "4 days ago",
@@ -79,7 +79,7 @@ const HasanAbiVideo = {
     Creator: HasanAbi,
     Views: "265K",
     TimeElapsed: "3 weeks ago",
-    Duration: 1201,
+    Duration: 1210,
     Link: "#"
 }
 

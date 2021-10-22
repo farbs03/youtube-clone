@@ -24,19 +24,21 @@ const Video = ({Data}) => {
         <div style={{maxWidth: "380px", margin: "10px"}}>
             <Link underline="none" to={Data.Link} style={{color: "inherit"}} component={NavLink}>
                 <div style={{marginBottom: "10px", height: "180px"}}>
-                    <img src={Data.Thumbnail} style={{width: "100%", height: "100%"}}/>
-                    <div 
-                        style={{
-                            backgroundColor: "rgba(0, 0, 0, 0.8)", 
-                            color: "white", 
-                            marginTop: "-28px", 
-                            width: "40px", 
-                            marginLeft: "auto",
-                            fontSize: "14px",
-                            zIndex: "1"
-                        }}
-                    >
-                        {formatTime(Data.Duration)}
+                    <img alt="thumbnail" src={Data.Thumbnail} style={{width: "100%", height: "100%", position: "relative"}}/>
+                    <div style={{width: "40px", marginLeft: "auto"}}>
+                        <div 
+                            style={{
+                                backgroundColor: "rgba(0, 0, 0, 0.7)", 
+                                color: "white", 
+                                width: "40px", 
+                                fontSize: "14px",
+                                marginTop: "-28px",
+                                position: "absolute",
+                                zIndex: "1"
+                            }}
+                        >
+                            {formatTime(Data.Duration)}
+                        </div>
                     </div>
                 </div>
             </Link>
